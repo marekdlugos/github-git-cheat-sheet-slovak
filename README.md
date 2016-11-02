@@ -1,10 +1,11 @@
-GitHub
 # Git cheat sheet
 
----
-This file is an unofficial Slovak translation of Git Cheat Sheet from Github that you can find on ![Github Resources page](https://services.github.com/resources/).
+## Translator notes:
+
+This file is an unofficial Slovak translation of Git Cheat Sheet from Github that you can find on [Github Resources page](https://services.github.com/resources/).
 
 Slovak language is also very similar to Czech what means that now it's accessible to over 15 million Slovak & Czech people.
+
 ---
 
 Git je open-source distribuovaný systém riadenia revízií, ktorému napomáhajú aktivity GitHubu na Vašom notebooku alebo stolnom počítači. Tento cheat sheet sumarizuje bežne používané Git príkazy pre rýchlu referenciu.
