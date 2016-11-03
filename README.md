@@ -2,13 +2,11 @@
 
 ## Translator notes
 
-This is a Slovak translation of Git Cheat Sheet from Github that you can find on [Github Resources page](https://services.github.com/resources/).
+> This is a Slovak translation of Git Cheat Sheet from Github that you can find on [Github Resources page](https://services.github.com/resources/).
 
-Slovak language is also very similar to Czech what means that now it's accessible to over **15 million Slovak & Czech people**.
+> Slovak language is also very similar to Czech what means that now it's accessible to over **15 million Slovak & Czech people**.
 
 ---
-
-## Preklad
 
 Git je open-source distribuovaný systém riadenia revízií, ktorému napomáhajú aktivity GitHubu na Vašom notebooku alebo stolnom počítači. Tento cheat sheet sumarizuje bežne používané Git príkazy pre rýchlu referenciu.
 
