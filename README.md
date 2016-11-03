@@ -6,14 +6,12 @@
 
 > Slovak language is also very similar to Czech what means that now it's accessible to over **15 million Slovak & Czech people**.
 
----
+## Začiatky s Gitom
 
-Git je open-source distribuovaný systém riadenia revízií, ktorému napomáhajú aktivity GitHubu na Vašom notebooku alebo stolnom počítači. Tento cheat sheet sumarizuje bežne používané Git príkazy pre rýchlu referenciu.
+Git je open-source distribuovaný systém riadenia revízií. Github je služba, na ktorej je možné tieto revízie (repozitáre, projekty) hostovať. Tento cheat sheet sumarizuje bežne používané Git príkazy pre rýchlu referenciu.
 
-Git is the open source distributed version control system that facilitates GitHub activities on your laptop or desktop. This cheat sheet summarizes commonly used Git command line instructions for quick reference.
-
-Inštalácia GITu
-GitHub ponúka aplikačných klientov, ktorí môžu zahŕňať aj grafické rozhranie pre najbežnejšie operácie s repozitármi a automaticky aktualizujúci sa command line klient Gitu pre zložitejšie situácie.
+## Inštalácia GITu
+GitHub ponúka aplikácie pre najbežnejšie operácie s repozitármi alebo rozhranie v príkazovom riadku pre zložitejšie situácie.
 
 Github pre Windows
 https://windows.github.com
@@ -26,26 +24,26 @@ Git distribúcie pre Linux a POSIX systémy sú dostupné na oficiálnych strán
 Git pre všetky platformy
 http://git-scm.com
 
-### Konfigurácia
-Nakonfigujte si používateľské informácie pre všetky lokálne repozitáre.
+## Konfigurácia
+Konfigurácia používateľských informácií na zariadení.
 
 ```
 $ git config --global user.name "[name]"
 ```
-Nastaví meno, ktoré chcete mať priradené k Vašim commitom
+Nastaví meno, ktoré bude priradené ku commitom
 
 ```
 $ git config --global user.email "[email address]"
 ```
-Nastaví e=mail, ktorý chcete mať priradený k Vašim commitom
+Nastaví e-mail, ktorý bude priradený ku commitom
 
 ```
 $ git config --global color.ui auto
 ```
-Umožní napomocné zvýrazňovanie výstupov z príkazového riadka
+Umožní farebné zvýrazňovanie výstupov z príkazového riadku
 
-### Vytváranie repozitárov
-Vytvorte nový repozitár alebo použite nejaký z existujúcej URL
+## Vytváranie repozitárov
+Vytváranie nového repozitára alebo používanie už existujúceho
 
 ```
 $ git init [project-name]
@@ -55,15 +53,15 @@ Vytvorí nový lokálny repozitár s daným názvom
 ```
 $ git clone [url]
 ```
-Stiahne projekt spolu so všetkou históriou verzií
+Stiahne celý repozitár z danej URL
 
-### Robenie zmien
-Zrevidujte zmeny a pridajte tie Vaše
+## Robenie zmien
+Zrevidovanie zmien a robenie ďalších
 
 ```
 $ git status
 ```
-Vráti zoznam všetkých nových alebo upravených súborov na commit
+Vráti zoznam všetkých nových alebo upravených súborov
 
 ```
 $ git diff
@@ -73,7 +71,7 @@ Ukáže rozdiely v súboroch, ktoré ešte neboli stage-nuté
 ```
 $ git add [file]
 ```
-Pridá súbor na prípravu pre versioning
+Pridá súbor do "poolu" pre nový commit
 
 ```
 $ git diff --staged
@@ -88,10 +86,10 @@ Unstage-ne súbor, ale zachová jeho obsah
 ```
 $ git commit -m "[descriptive message]"
 ```
-Zaznamená zmeny v súbore do histórie verzií permanentne
+Vytvorí commita pridá k nemu správu s opisom zmien, ktoré boli urobené
 
-### Skupinové zmeny
-Pomenujte sériu commitov a kombinujte Váš progres
+## Skupinové zmeny
+Pomenovanie série commitov a kombinovanie progresu
 
 ```
 $ git branch
@@ -106,20 +104,20 @@ Vytvorí novú vetvu
 ```
 $ git checkout [branch-name]
 ```
-Zmení vetvu na tú, ktorej názov sme zadali a aktualizuje repozitárový priečinok
+Prepne nás do danej vetvy a aktualizuje súbory
 
 ```
 $ git merge [branch]
 ```
-Zlúči históriu zadanej vetvy do súčasnej vetvy
+Zlúči históriu danej vetvy do súčasnej vetvy
 
 ```
 $ git branch -d [branch-name]
 ```
 Zmaže vetvu
 
-### Refaktorizácia súborov
-Premiestnenie alebo odstránenie verzovaných súborov
+## Premiestňovanie súborov
+Premiestnenie alebo zmazanie verzovaných súborov
 
 ```
 $ git rm [file]
@@ -129,30 +127,30 @@ Zmaže súbor z priečinka a zaznamená, že bol zmazaný
 ```
 $ git rm --cached [file]
 ```
-Odstráni súbor z verzovacieho systému ale zachová súbor lokálne
+Odstráni súbor z verzovacieho systému, ale zachová súbor lokálne
 
 ```
 $ git mv [file-original] [file-renamed]
 ```
 Zmení názov súboru a pripraví súbor na commit
 
-### Zakázanie trackovania
-Vynechanie dočasných súborov
+## Zakázanie verzovania
+Vynechanie súborov, ktoré nechceme verzovať alebo dočasných súborov
 
 ```
 *.log
 build/
 temp-*
 ```
-Textový súbor nazvaný .gitignore zakáže verzovanie nechcených súborov alebo priečinkov (väčšinou napr. súbory IDE).
+Textový súbor nazvaný .gitignore zakáže verzovanie nechcených súborov alebo priečinkov (väčšinou napr. súbory IDE, heslá).
 
 ```
 $ git ls-files --other --ignored --exclude-standard
 ```
-Vráti zoznam všetkych ignorovaných súborov v projekte
+Vráti zoznam všetkých ignorovaných súborov v projekte
 
-### Ukladanie fragmentov
-Odloženie a obnovenie nedokončených zmien
+## Ukladanie menších zmien
+Uloženie a obnovenie nedokončených zmien
 
 ```
 $ git stash
@@ -162,77 +160,79 @@ Dočasne uloží všetky zmenené súbory
 ```
 $ git stash pop
 ```
-Obnoví posledne stashnuté súbory
+Obnoví posledne stashnuté (uložené) súbory
 
 ```
 $ git stash list
 ```
-Vráti všetky stashnuté zmeny.
+Vráti zoznam všetkých stashnutých (uložených) zmien
 
 ```
 $ git stash drop
 ```
-Zahodí posledne stashnuté zmeny
+Zahodí posledne stashnuté (uložené) zmeny
 
-### Revidovanie histórie
+## Revidovanie histórie
 Listovanie a kontrola vývoja súborov
 
 ```
 $ git log
 ```
-Vráti
-Lists version history for the current branch
+Vráti zoznam commitov v aktuálnej vetve
 
 ```
 $ git log --follow [file]
 ```
-Vráti zoznam histórie pre daný súbor (zahŕňajúc premenovávania)
+Vráti zoznam zmien pre daný súbor (zahŕňajúc premenovávania)
 
 ```
 $ git diff [first-branch]...[second-branch]
 ```
-Zobrazi rozdiely medzi dvoma vetvami
+Zobrazí rozdiely medzi dvoma vetvami
 
 ```
 $ git show [commit]
 ```
 Vráti metadata a obsah zmien daného commitu
 
-### Vrátenie zmien
-Zmazanie chýb a nahradenie histórie
+## Vrátenie zmien
+Napravenie chýb a nahradenie histórie
 
 ```
 $ git reset [commit]
 ```
-Vráti všetky commity po [commit], zachovavajúc zmeny lokálne
+Vráti všetky urobené zmeny až po daný commit, zachovajúc lokálne zmeny
 
 ```
 $ git reset --hard [commit]
 ```
-Zahodí všetkú históriu a zmeny až po daný [commit]
+Zahodí všetky urobené zmeny až po daný commit
 
-### Synchronizácia zmien
-Register a repository bookmark and exchange version history
+## Synchronizácia zmien
+Zapísanie zmien a stiahnutie alebo nahratie zmien
 
 ```
 $ git fetch [bookmark]
 ```
-Stiahne všetky zmeny zo vzdialeného repozitára do lokálnej kópie
+Stiahne všetky zmeny zo vzdialeného do lokálneho repozitára
 
 ```
 $ git merge [bookmark]/[branch]
 ```
-Zlúči stiahnutú vetvu do súčasnej
+Zlúči danú vetvu do súčasnej
 
 ```
 $ git push [alias] [branch]
 ```
-Nahraje commity a zmeny do vetvy na Github
+Nahraje commity a zmeny do danej vetvy na Github
 
 ```
 $ git pull
 ```
-Stiahne k Vám všetky aktuálne zmeny a históriu
+Stiahne k Vám všetky aktuálne zmeny a históriu kódu
 
-GitHub tréning
+---
+
+## GitHub tréning
+
 Získajte viac informácií o používaní GitHubu a Gitu. Napíšte email nášmu tréningovému tímu training@github.com alebo navštívte našu web stránku pre informácie o vzdelávacích podujatiach a dostupnosti sukromných lekcií.
