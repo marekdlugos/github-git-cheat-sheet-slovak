@@ -2,11 +2,13 @@
 
 ## Translator notes
 
-This file is an unofficial Slovak translation of Git Cheat Sheet from Github that you can find on [Github Resources page](https://services.github.com/resources/).
+This is a Slovak translation of Git Cheat Sheet from Github that you can find on [Github Resources page](https://services.github.com/resources/).
 
-Slovak language is also very similar to Czech what means that now it's accessible to over 15 million Slovak & Czech people.
+Slovak language is also very similar to Czech what means that now it's accessible to over **15 million Slovak & Czech people**.
 
 ---
+
+## Preklad
 
 Git je open-source distribuovaný systém riadenia revízií, ktorému napomáhajú aktivity GitHubu na Vašom notebooku alebo stolnom počítači. Tento cheat sheet sumarizuje bežne používané Git príkazy pre rýchlu referenciu.
 
@@ -26,7 +28,7 @@ Git distribúcie pre Linux a POSIX systémy sú dostupné na oficiálnych strán
 Git pre všetky platformy
 http://git-scm.com
 
-## Konfigurácia
+### Konfigurácia
 Nakonfigujte si používateľské informácie pre všetky lokálne repozitáre.
 
 ```
@@ -44,7 +46,7 @@ $ git config --global color.ui auto
 ```
 Umožní napomocné zvýrazňovanie výstupov z príkazového riadka
 
-## Vytváranie repozitárov
+### Vytváranie repozitárov
 Vytvorte nový repozitár alebo použite nejaký z existujúcej URL
 
 ```
@@ -57,7 +59,7 @@ $ git clone [url]
 ```
 Stiahne projekt spolu so všetkou históriou verzií
 
-## Robenie zmien
+### Robenie zmien
 Zrevidujte zmeny a pridajte tie Vaše
 
 ```
@@ -90,7 +92,7 @@ $ git commit -m "[descriptive message]"
 ```
 Zaznamená zmeny v súbore do histórie verzií permanentne
 
-## Skupinové zmeny
+### Skupinové zmeny
 Pomenujte sériu commitov a kombinujte Váš progres
 
 ```
@@ -118,7 +120,7 @@ $ git branch -d [branch-name]
 ```
 Zmaže vetvu
 
-## Refaktorizácia súborov
+### Refaktorizácia súborov
 Premiestnenie alebo odstránenie verzovaných súborov
 
 ```
@@ -136,7 +138,7 @@ $ git mv [file-original] [file-renamed]
 ```
 Zmení názov súboru a pripraví súbor na commit
 
-## Zakázanie trackovania
+### Zakázanie trackovania
 Vynechanie dočasných súborov
 
 ```
@@ -144,61 +146,61 @@ Vynechanie dočasných súborov
 build/
 temp-*
 ```
-Textový súbor nazvaný .gitignore zakáže nechcené verzovanie súborov, ktoré
-A text file named .gitignore suppresses accidental versioning of files and paths matching the specified pa erns
+Textový súbor nazvaný .gitignore zakáže verzovanie nechcených súborov alebo priečinkov (väčšinou napr. súbory IDE).
 
 ```
 $ git ls-files --other --ignored --exclude-standard
 ```
-Lists all ignored files in this project
+Vráti zoznam všetkych ignorovaných súborov v projekte
 
-## Ukladanie fragmentov
-Shelve and restore incomplete changes
+### Ukladanie fragmentov
+Odloženie a obnovenie nedokončených zmien
 
 ```
 $ git stash
 ```
-Temporarily stores all modified tracked files
+Dočasne uloží všetky zmenené súbory
 
 ```
 $ git stash pop
 ```
-Restores the most recently stashed files
+Obnoví posledne stashnuté súbory
 
 ```
 $ git stash list
 ```
-Lists all stashed changesets
+Vráti všetky stashnuté zmeny.
 
 ```
 $ git stash drop
 ```
-Discards the most recently stashed changeset
+Zahodí posledne stashnuté zmeny
 
-## Revidovanie histórie
-Browse and inspect the evolution of project files
+### Revidovanie histórie
+Listovanie a kontrola vývoja súborov
 
 ```
 $ git log
 ```
+Vráti
 Lists version history for the current branch
 
 ```
 $ git log --follow [file]
 ```
-Lists version history for a file, including renames
+Vráti zoznam histórie pre daný súbor (zahŕňajúc premenovávania)
 
 ```
 $ git diff [first-branch]...[second-branch]
 ```
-Shows content differences between two branches
+Zobrazi rozdiely medzi dvoma vetvami
 
 ```
 $ git show [commit]
 ```
-Outputs metadata and content changes of the specified commit
+Vráti metadata a obsah zmien daného commitu
 
-## Vrátenie zmien
+### Vrátenie zmien
 Zmazanie chýb a nahradenie histórie
 
 ```
@@ -211,18 +213,18 @@ $ git reset --hard [commit]
 ```
 Zahodí všetkú históriu a zmeny až po daný [commit]
 
-## Synchronizácia zmien
+### Synchronizácia zmien
 Register a repository bookmark and exchange version history
 
 ```
 $ git fetch [bookmark]
 ```
-Downloads all history from the repository bookmark
+Stiahne všetky zmeny zo vzdialeného repozitára do lokálnej kópie
 
 ```
 $ git merge [bookmark]/[branch]
 ```
-Combines bookmark’s branch into current local branch
+Zlúči stiahnutú vetvu do súčasnej
 
 ```
 $ git push [alias] [branch]
